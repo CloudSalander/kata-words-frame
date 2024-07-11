@@ -10,6 +10,7 @@ printFrame($text_to_print);
 function printFrame(string $text_to_print): void {
     $words = explode(" ",$text_to_print);
     $longest_word_length = getLongestWordLength($words);
+    printFrameRow($longest_word_length);
  }
 
 function getLongestWordLength(array $words): int {
@@ -19,6 +20,15 @@ function getLongestWordLength(array $words): int {
     }
     return $size;
 }
+
+function printFrameRow(int $n_columns):void {
+    $range = range(1,$n_columns+BORDER_PADDING);
+    foreach($range as $row) {
+        echo "#";
+    }
+    echo PHP_EOL;
+}
+
 
 
 ?>
