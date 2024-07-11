@@ -5,7 +5,7 @@
  Crea una funció que rebi un text i mostri cada paraula en una línea,
  formant un marc rectangular de almohadillas("#").
 
- **Input**
+ **Input**  
  ¿Has debugado ya?
 
  **Output**
