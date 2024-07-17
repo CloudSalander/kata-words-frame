@@ -33,7 +33,7 @@ function printFrameRow(int $n_columns): void {
 
 function printWordRows(array $words,int $longest_word_length): void {
     foreach($words as $word){
-        echo "# ".$word;
+        echo FRAME_CHAR." ".$word;
         printRemainingRow(strlen($word),$longest_word_length);
     }
 }
