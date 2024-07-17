@@ -1,10 +1,10 @@
 <?php
 
-define('FRAME_CHAR','#');
+define('FRAME_CHAR','&#129415;');
 define('BORDER_PADDING',4);
 
 //TODO: Remember, we should validate EVERY input entry. Not the main purpose of the exercise.
-$text_to_print = readline();
+$text_to_print = "Has debugado ya?";
 printFrame($text_to_print);
 
 function printFrame(string $text_to_print): void {
@@ -28,7 +28,7 @@ function printFrameRow(int $n_columns): void {
     foreach($range as $row) {
         echo FRAME_CHAR;
     }
-    echo PHP_EOL;
+    echo '<br>';
 }
 
 function printWordRows(array $words,int $longest_word_length): void {
@@ -42,10 +42,10 @@ function printRemainingRow(int $current_word_length, int $longest_word_length): 
     $columns_diff = $longest_word_length-$current_word_length;
     $con = 0;
     while($con < $columns_diff) {
-        echo " ";
+        echo '&nbsp;';
         ++$con;
     }
-    echo " ".FRAME_CHAR.PHP_EOL;
+    echo " ".FRAME_CHAR.'<br>';
 }
 
 
